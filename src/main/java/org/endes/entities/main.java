@@ -2,14 +2,26 @@ package org.endes.entities;
 
 import org.endes.entities.persona;
 
+/**
+ * Clase Main.
+ * Contiene el método principal que permite probar
+ * el funcionamiento de la clase persona.
+ */
 public class main {
 
+    /**
+     * Método principal del programa.
+     * Se crean objetos utilizando ambos constructores,
+     * se usan getters y setters y se prueban los métodos estáticos.
+     *
+     * @param args argumentos de línea de comandos
+     */
     public static void main(String[] args) {
 
-        // Objeto usando el constructor por defecto
+        // Creación usando el constructor por defecto
         persona persona1 = new persona();
 
-        // Objeto usando el constructor completo
+        // Creación usando el constructor completo
         persona persona2 = new persona(
                 1,
                 "Teclado",

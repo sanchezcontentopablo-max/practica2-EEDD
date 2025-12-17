@@ -2,31 +2,54 @@ package org.endes.entities;
 
 /**
  * Clase Producto.
- * Se utiliza para practicar conceptos básicos de POO
- * como encapsulación, constructores y métodos.
+ * Representa un producto genérico para practicar los conceptos
+ * básicos de Programación Orientada a Objetos como encapsulación,
+ * constructores, getters/setters y métodos estáticos.
  */
 public class Producto {
 
-    // Atributos del producto
+    /** Identificador del producto */
     private int id;
+
+    /** Nombre del producto */
     private String nombre;
+
+    /** Categoría del producto */
     private String categoria;
+
+    /** Precio del producto */
     private double precio;
+
+    /** Stock disponible */
     private int stock;
+
+    /** Indica si el producto está disponible */
     private boolean disponible;
+
+    /** Proveedor del producto */
     private String proveedor;
+
+    /** Peso del producto */
     private double peso;
 
     /**
-     * Constructor vacío.
-     * Se usa cuando no conocemos los datos al crear el objeto.
+     * Constructor por defecto.
+     * Inicializa el producto con valores básicos.
      */
     public Producto() {
+        this.id = 0;
+        this.nombre = "Sin nombre";
+        this.categoria = "Sin categoría";
+        this.precio = 0.0;
+        this.stock = 0;
+        this.disponible = false;
+        this.proveedor = "Desconocido";
+        this.peso = 0.0;
     }
 
     /**
      * Constructor completo.
-     * Permite crear un producto con todos sus datos.
+     * Permite crear un producto indicando todos sus atributos.
      */
     public Producto(int id, String nombre, String categoria, double precio,
                     int stock, boolean disponible, String proveedor, double peso) {
@@ -107,14 +130,20 @@ public class Producto {
     }
 
     /**
-     * Calcula el precio final aplicando el IVA.
+     * Calcula el precio final aplicando el IVA (21%).
+     *
+     * @param precio precio base
+     * @return precio con IVA incluido
      */
     public static double calcularPrecioConIVA(double precio) {
         return precio * 1.21;
     }
 
     /**
-     * Comprueba si hay stock disponible.
+     * Comprueba si existe stock disponible.
+     *
+     * @param stock cantidad a comprobar
+     * @return true si hay stock, false en caso contrario
      */
     public static boolean hayStock(int stock) {
         return stock > 0;

@@ -7,7 +7,6 @@ package org.endes.entities;
  * constructores, getters/setters y métodos estáticos.
  */
 public class Producto {
-
     /** Identificador del producto */
     private int id;
 

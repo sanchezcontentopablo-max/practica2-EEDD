@@ -94,6 +94,15 @@ public class Main {
         System.out.println("¿Hay stock del producto3?: " +
                 Producto.hayStock(producto3.getStock()));
 
+        // ===== PRUEBA 6: Validación de datos =====
+        System.out.println("\n--- PRUEBA 6: Validación de datos ---");
+        try {
+            producto3.setPrecio(-10);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Precio negativo rechazado: " + e.getMessage());
+        }
+        System.out.println("El precio se conserva: " + producto3.getPrecio() + "€");
+
         // ===== RESUMEN FINAL =====
         System.out.println("\n" + "=".repeat(60));
         System.out.println("    RESUMEN DE PRUEBAS");
@@ -103,6 +112,7 @@ public class Main {
         System.out.println("✓ Todos los setters probados (8/8)");
         System.out.println("✓ Todos los getters probados (8/8)");
         System.out.println("✓ Métodos estáticos probados (2/2)");
+        System.out.println("✓ Validación de datos probada");
         System.out.println("✓ Total productos creados: 3");
         System.out.println("=".repeat(60));
     }

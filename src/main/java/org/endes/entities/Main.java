@@ -8,6 +8,12 @@ package org.endes.entities;
 public class Main {
 
     /**
+     * Clase de arranque: no se instancia.
+     */
+    private Main() {
+    }
+
+    /**
      * Método principal del programa.
      * Se prueban constructores, getters, setters
      * y métodos estáticos de la clase Producto de forma exhaustiva.
